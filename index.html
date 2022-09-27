@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <title>Chat</title>
+
+    <style>
+        html,body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        }
+        body{
+            background: lightblue;       
+        }
+        .ramka{      
+            border-radius: 30px;
+            background: white;
+            display: flex;           
+            width: 100%;
+            height: 100%;
+            justify-content: space-between;
+            box-sizing: border-box;           
+        }
+        .menu {
+            display: flex;
+            background-color: lightgrey;
+            flex-direction: column;
+            width: 200px;
+            justify-content: left;   
+            align-items: center;
+            justify-content: space-between;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .logo {
+            display: flex;
+            justify-content: left;
+            font-size: 150%;
+        }
+
+        /*li {
+            text-decoration: none;
+            list-style: none;
+        }*/
+        
+        .nav__list1 {
+            text-decoration: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            
+        }
+        .nav__link {
+            color: black;
+            text-decoration: none;
+            list-style: none;
+        }
+        .nav__link--aktive {
+            color:blue;
+        }
+        .display {
+            display: flex;
+            justify-content: space-between;
+            
+            width: 100%;
+
+        }
+        .inbox {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 250px;
+            padding: 1rem;
+            border-right: 2px lightgray solid;
+        }
+        .inbox__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .plus { 
+            font-size: 200%;
+            margin: 0;            
+        }
+        .chat {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .chat__user {
+            border-bottom: 2px lightgray solid;
+        }
+        .chat__date{
+            display: flex;
+            
+        }
+        .chat__massage {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: lightgray;
+        }
+        .chat__antwort {
+            border-top: 2px lightgray solid;
+            display: flex;
+            justify-content: space-between;
+            background-color: lightgray;
+        }
+        .footer {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 50px;
+            padding: 2rem 1rem;
+            border-left: 2px lightgray solid;
+            
+        }
+        .footer__down {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 150px;
+                
+        }
+       
+
+    </style>
+
+
+
+
+</head>
+<body>
+    <div class="ramka">
+        <div class="menu">
+            <div class="logo">
+            <i class="las la-cube"></i>
+                Shark
+            </div>
+            <nav>
+                <ul class="nav__list1">
+                    <li class="nav__href">
+                        <a class="nav__link" href="">
+                            <span class="naicon">
+                                <i class="las la-layer-group"></i>
+                            </span>
+                            <span class="nav__text">
+                                Dashboard
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__href">
+                        <a class="nav__link" href="">
+                            <span class="icon">
+                                <i class="las la-poll"></i>
+                            </span>
+                            <span class="nav__text">
+                                Statistic
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__href">
+                        <a class="nav__link" href="">
+                            <span class="icon">
+                                <i class="las la-comment-alt"></i>
+                            </span>
+                            <span class="nav__text">
+                                Support
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__href">
+                        <a class="nav__link" href="">
+                            <span class="icon">
+                                <i class="las la-inbox"></i>
+                            </span>
+                            <span class="nav__text">
+                                Inbox
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__href">
+                        <a class="nav__link" href="">
+                            <span class="icon">
+                                <i class="las la-rocket"></i>
+                            </span>
+                            <span class="nav__text">
+                                Goals
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav__href">
+                        <a class="nav__link" href="">
+                            <span class="icon">
+                                <i class="las la-link"></i>
+                            </span>
+                            <span class="nav__text">
+                                Links
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                
+            </nav>
+                <div class="projects">
+                    <h5>PROJECTS</h>
+                    <div class="projects__nav">
+                        <ul class="nav__list2">
+                            <li class="nav__href2" href="">
+                                <span class="icon2"></span>
+                                <span class="text">
+                                    Calipso
+                                </span>
+                                <div class="nav__href2--last"><img class="logo" src="https://via.placeholder.com/70x20" alt="logo Schark">
+                                </div>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            <button class="button">Show more</button>
+        </div>
+            <div class="display">
+                <div class="inbox">
+                    <div class="inbox__header">
+                        <h1>Inbox </h1>
+                        <figure class="plus"><i class="las la-plus-square"></i>
+                        </figure>
+                    </div>
+                    <button class="button">Show more</button>
+                    <img class="User" src="https://via.placeholder.com/70x20" alt="User1">
+                    <img class="User" src="https://via.placeholder.com/70x20" alt="User1">
+                    <img class="User" src="https://via.placeholder.com/70x20" alt="User1">
+                    <img class="User" src="https://via.placeholder.com/70x20" alt="User1">
+                    <img class="User" src="https://via.placeholder.com/70x20" alt="User1">
+                    <img class="User" src="https://via.placeholder.com/70x20" alt="User1">
+                    <img class="User" src="https://via.placeholder.com/70x20" alt="User1">
+                    <img class="User" src="https://via.placeholder.com/70x20" alt="User1">
+                </div>
+                <div class="chat">
+                    <div class="chat__user">
+                        <div>Vanya</div></div>
+                        <div class="chat__message">
+                            <span class="chat__date"><h6>July 29, Tuesday</h6>
+                            </span>
+                            <p>12:25</p>
+                            <p>12:29</p>
+                        </div>
+                        <div class="chat__antwort">
+                            Write a message 
+                            <div class="chat__settings">
+                                <button class="button__aside">Show more</button>
+                                <button class="button__aside">Show more</button>
+                                <button class="button__aside">Show more</button>
+                            </div>
+                        </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="footer">
+                <button class="button__aside">Show more</button>
+                <div class="footer__down">
+                    <button class="button__aside">Show more</button>
+                    <button class="button__aside">Show more</button>
+                    <button class="button__aside">Show more</button>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
